@@ -36,6 +36,8 @@ Answer.create(title:"1.3914 million km", user_id:3, question_id:4)
 
 Vote.create(user_id:1, vote_count:1, answer_id:1)
 Vote.create(user_id:2, vote_count:1, answer_id:1)
+Vote.create(user_id:2, vote_count:1, answer_id:2)
+Vote.create(user_id:3, vote_count:1, answer_id:3)
 
 
 sc = Tag.create(name:"science")

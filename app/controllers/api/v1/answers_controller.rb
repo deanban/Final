@@ -9,7 +9,6 @@ class Api::V1::AnswersController < ApplicationController
 		# byebug
 		@answer = Answer.new(title: params[:title], user_id: params[:user_id], question_id: params[:question_id])
 
-
 		if @answer.save
 			render json: @answer.to_json
 		else
