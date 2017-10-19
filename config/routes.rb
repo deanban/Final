@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       	# resources :sessions, only: [:create, :destroy]
       	post 'auth' => 'authentication#authenticate_user'
       	get 'home' => 'home#index'
+        get 'categories' => 'categories#index'
+        get 'tags' => 'tags#index'
       	resources :questions, only: [:index, :create, :show, :destroy]
       	resources :answers, only: [:create, :destroy]
 
