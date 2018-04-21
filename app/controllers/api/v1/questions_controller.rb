@@ -24,7 +24,9 @@ class Api::V1::QuestionsController < ApplicationController
 				@question.tags << @tag
 			end
 
+
 		end
+
 
 		if @question.save
 			render json: @question

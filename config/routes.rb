@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   		# devise_for :users
       	# resources :sessions, only: [:create, :destroy]
       	post 'auth' => 'authentication#authenticate_user'
+      	post 'auth' => 'authentication#create'
       	get 'home' => 'home#index'
         get 'categories' => 'categories#index'
         get 'tags' => 'tags#index'
+        post 'users' => 'users#create'
       	resources :questions, only: [:index, :create, :show, :destroy]
       	resources :answers, only: [:create, :destroy]
+        mount ActionCable.server => '/cable'
 
     end
   end
